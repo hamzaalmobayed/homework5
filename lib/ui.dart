@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
               ElevatedButton(
                 onPressed: (){
                   AuthProvider.signUp();
-
+                  AuthProvider.add();
                 },
                 child: Text("done"),
               )

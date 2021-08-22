@@ -23,6 +23,10 @@ class AuthProvider extends ChangeNotifier{
     await Auth_Helper.authHelper.checkVerification();
   }
   add() async{
-    await FireStore_Helper.FireStoreHelper.add("table", map)
+    await FireStore_Helper.FireStoreHelper.add("user", {
+      "email":emailCon.text,
+      "name":nameCon.text,
+      "age":ageCon.text
+    });
   }
 }
